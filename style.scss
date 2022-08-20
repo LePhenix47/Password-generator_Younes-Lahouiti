@@ -1,0 +1,37 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Open sans, Helvetica, sans-serif;
+    background: #111;
+    padding: clamp(20px, 5vw, 50px) 10px 10px;
+}
+
+
+$breakpoints: (
+    mobile: 768px,
+    tablet: 992px,
+    laptop: 1150px,
+    desktop: 1920px
+);
+
+
+//Mixins
+
+@mixin mobile-only {
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+        @content;
+    }
+}
+
+@mixin center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
