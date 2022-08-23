@@ -1,3 +1,152 @@
+//Variables and maps
+$bg-body: #10090b;
+$bg-color-input: black;
+$txt-color-input: white;
+$txt-color-input--active: darken($txt-color-input, 60%);
+
+$color-input-shadow: #22191d;
+
+$color-input-range-bg: #392325;
+
+
+$color-input-range-btn: #8f5f5c;
+$color-input-range-btn--hover: darken($color-input-range-btn, 10%);
+
+$color-input-range-btn--active: lighten($color-input-range-btn, 10%);
+$color-input-range-btn--thumb: lighten($color-input-range-btn, 20%);
+
+
+$color-input-range-btn--hover: lighten($color-input-range-btn, 10%);
+
+$color-copy-btn: #8c5d61;
+$color-copy-btn--hover: lighten($color-copy-btn, 10%);
+$color-copy-btn--active: lighten($color-copy-btn, 20%);
+
+$color-copy-btn-icon--hover: lighten($color-copy-btn , 10%);
+$color-copy-btn-icon--active: lighten($color-copy-btn , 20%);
+
+
+$color-checkboxes: #b78583;
+
+:root {
+    --bg-body: #{$bg-body};
+    --bg-color-input: #{$bg-color-input};
+
+    --txt-color-input: #{$txt-color-input};
+    --txt-color-input--active: #{$txt-color-input--active};
+
+    --color-input-shadow: #{$color-input-shadow};
+
+    --color-input-range-bg:#{$color-input-range-bg};
+
+    --color-input-range-btn:#{$color-input-range-btn};
+    --color-input-range-btn--hover: #{$color-input-range-btn--hover};
+    --color-input-range-btn--active: #{$color-input-range-btn--active};
+    --color-input-range-btn--thumb: #{$color-input-range-btn--thumb};
+
+    --color-copy-btn:#{$color-copy-btn};
+    --color-copy-btn--active: #{$color-copy-btn--active};
+    --color-copy-btn--hover: #{$color-copy-btn--hover};
+    --color-copy-btn-icon--hover: #{$color-copy-btn-icon--hover};
+    --color-copy-btn-icon--active: #{$color-copy-btn-icon--active};
+
+    --color-checkboxes:#{$color-checkboxes};
+
+    --color-input-range-btn--hover: #{$color-input-range-btn--hover};
+
+
+
+    --bg-selection: orange;
+    --color-selection: black;
+
+}
+
+@media (prefers-color-scheme: light) {
+    $bg-body: #eff6f4;
+    $bg-color-input: white;
+    $txt-color-input: black;
+    $txt-color-input--active: lighten($txt-color-input, 60%);
+    $color-input-shadow: #dfe6e2;
+    $color-input-range-bg: #c5ddda;
+    $color-input-range-btn--hover: lighten($color-input-range-btn, 10%);
+
+
+    $color-input-range-btn--hover: darken($color-input-range-btn, 10%);
+    $color-input-range-btn: #70a0a3;
+    $color-input-range-btn--hover: lighten($color-input-range-btn, 10%);
+    $color-input-range-btn--active: lighten($color-input-range-btn, 10%);
+    $color-input-range-btn--thumb: darken($color-input-range-btn, 20%);
+
+    $color-copy-btn: #739f9c;
+    $color-copy-btn--hover: darken($color-copy-btn, 10%);
+    $color-copy-btn--active: darken($color-copy-btn, 20%);
+
+    $color-copy-btn-icon--hover: lighten($color-copy-btn , 10%);
+    $color-copy-btn-icon--active: lighten($color-copy-btn , 20%);
+
+    $color-checkboxes: #4c7c7d;
+
+    :root {
+        --bg-body: #{$bg-body};
+        --bg-color-input: #{$bg-color-input};
+
+        --txt-color-input: #{$txt-color-input};
+        --txt-color-input--active: #{$txt-color-input--active};
+
+        --color-input-shadow: #{$color-input-shadow};
+
+        --color-input-range-bg:#{$color-input-range-bg};
+
+        --color-input-range-btn:#{$color-input-range-btn};
+        --color-input-range-btn--hover: #{$color-input-range-btn--hover};
+        --color-input-range-btn--active: #{$color-input-range-btn--active};
+        --color-input-range-btn--thumb: #{$color-input-range-btn--thumb};
+
+        --color-copy-btn:#{$color-copy-btn};
+        --color-copy-btn--active: #{$color-copy-btn--active};
+        --color-copy-btn--hover: #{$color-copy-btn--hover};
+        --color-copy-btn-icon--hover: #{$color-copy-btn-icon--hover};
+        --color-copy-btn-icon--active: #{$color-copy-btn-icon--active};
+
+        --color-checkboxes:#{$color-checkboxes};
+
+        --color-input-range-btn--hover: #{$color-input-range-btn--hover};
+
+        --bg-selection: blue;
+        --color-selection: white;
+    }
+
+}
+
+
+$breakpoints: (
+    mobile: 768px,
+    tablet: 992px,
+    laptop: 1150px,
+    desktop: 1920px
+);
+
+//LIGHT MODE
+// $bg-body: #eff6f4;
+// $bg-color-input: white;
+// $txt-color-input: black;
+// $color-input-shadow: #dfe6e2;
+// $color-input-range-bg: #c5ddda;
+// $color-input-range-btn: #70a0a3;
+// $color-copy-btn: #739f9c;
+// $color-checkboxes: #4c7c7d;
+
+//DARK MODE
+// $bg-body: #10090b;
+// $bg-color-input: black;
+// $txt-color-input: white;
+// $color-input-shadow: #22191d;
+// $color-input-range-bg: #392325;
+// $color-input-range-btn: #8f5f5c;
+// $color-copy-btn: #8c5d61;
+// $color-checkboxes: #b78583;
+
+
 *,
 ::before,
 ::after {
@@ -9,9 +158,11 @@
 
 body {
     min-height: 100vh;
-    font-family: Open sans, Helvetica, sans-serif;
-    background: #10090b;
-    color: white;
+    font-family: Open sans,
+        Helvetica,
+        sans-serif;
+    background: var(--bg-body);
+    color: var(--txt-color-input);
 }
 
 
@@ -29,38 +180,6 @@ label {
         cursor: pointer;
     }
 }
-
-//Dark mode 
-
-
-
-//Variables
-$bg-color-input: black;
-$txt-color-input: white;
-$color-input-shadow: #22191d;
-$color-input-range-bg: #392325;
-$color-input-range-btn: #8f5f5c;
-$color-copy-btn: #8c5d61;
-$color-checkboxes: #b78583;
-
-
-@media (prefers-color-scheme: light) {
-    $bg-color-input: white;
-    $txt-color-input: black;
-    $color-input-shadow: #dfe6e2;
-    $color-input-range-bg: #c5ddda;
-    $color-input-range-btn: #70a0a3;
-    $color-copy-btn: #739f9c;
-    $color-checkboxes: #4c7c7d;
-}
-
-
-$breakpoints: (
-    mobile: 768px,
-    tablet: 992px,
-    laptop: 1150px,
-    desktop: 1920px
-);
 
 
 //Mixins
@@ -85,24 +204,23 @@ $breakpoints: (
 
 //Other
 *::selection {
-    background-color: orange;
-    color: black;
+    background-color: var(--bg-selection);
+    color: var(--color-selection);
 }
 
 ::-webkit-scrollbar {
-    background-color: $color-input-shadow;
+    background-color: var(--color-input-shadow);
     border-radius: 100vmax;
     width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: $color-input-range-btn;
+    background-color: var(--color-input-range-btn);
     border-radius: 100vmax;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: lighten($color-input-range-btn, 10%);
-
+    background-color: var(--color-input-range-btn--hover);
 }
 
 
@@ -120,7 +238,7 @@ $breakpoints: (
 .theme {
 
     &__container {
-        background-color: $color-input-range-bg;
+        background-color: var(--color-input-range-bg);
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -148,20 +266,20 @@ $breakpoints: (
         @include center-flex;
 
         &-text {
-            background-color: $bg-color-input;
-            color: $txt-color-input;
+            background-color: var(--bg-color-input);
+            color: var(--txt-color-input);
             height: 75px;
-            width: 65%;
+            width: 70%;
             font-size: 22px;
             padding: 0 10px;
             border-radius: 13px;
             box-shadow:
-                0px 5px 8px $color-input-shadow, 0px -5px 8px $color-input-shadow, //Y axis, up & down
-                5px 0px 8px $color-input-shadow, -5px 0px 8px $color-input-shadow ; //X axis, left & right
+                0px 5px 8px var(--color-input-shadow), 0px -5px 8px var(--color-input-shadow), //Y axis, up & down
+                5px 0px 8px var(--color-input-shadow), -5px 0px 8px var(--color-input-shadow); //X axis, left & right
             border: none;
 
             &::placeholder {
-                color: darken($txt-color-input, 60%);
+                color: var(--txt-color-input--active);
             }
         }
 
@@ -171,15 +289,16 @@ $breakpoints: (
 
             &:hover>i {
                 cursor: pointer;
-                color: lighten($color-copy-btn , 10%)
+                color: var(--color-copy-btn-icon--hover);
+
             }
 
             &:active>i {
-                color: lighten($color-copy-btn , 20%)
+                color: var(--color-copy-btn-icon--active);
             }
 
             &>i {
-                color: $color-copy-btn;
+                color: var(--color-copy-btn);
                 font-size: 36px;
             }
         }
@@ -199,15 +318,16 @@ $breakpoints: (
         &-input {
             @include center-flex;
             appearance: none;
-            background-color: $color-input-range-bg;
+            background-color: var(--color-input-range-bg);
             border-radius: 25px;
             height: 5px;
 
+            width: 210px;
 
 
             &::-webkit-slider-runnable-track {
                 border-radius: 25px;
-                background-color: $color-input-range-bg;
+                background-color: var(--color-input-range-bg);
                 width: 100%;
                 height: 10px;
                 overflow: hidden;
@@ -221,9 +341,10 @@ $breakpoints: (
                 appearance: none;
                 width: 10px;
                 height: 10px;
-                background-color: lighten($color-input-range-btn, 20%);
+                background-color: var(--color-input-range-btn--thumb);
+
                 border-radius: 100vmax;
-                box-shadow: -105px 0px 0px 100px $color-input-range-btn;
+                box-shadow: -105px 0px 0px 100px var(--color-input-range-btn);
                 transition: background-color 250ms ease-out;
             }
 
@@ -234,7 +355,18 @@ $breakpoints: (
         display: flex;
         flex-direction: column;
         gap: 15px; //It's just amazing that you can now add gaps between elements using flexbox
-        width: 100%;
+
+
+        &-container {
+            display: flex;
+            width: 75%;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        &-labels {
+            width: auto;
+        }
 
         &-input {
 
@@ -250,13 +382,42 @@ $breakpoints: (
 
 
             &-checked {
-                border-radius: 4px;
-                color: $color-checkboxes;
+                border-radius: 1px;
+                color: var(--color-checkboxes);
+                outline: 2px solid $txt-color-input;
             }
 
             &-unchecked {
-                border-radius: 4px;
-                color: $color-checkboxes;
+                border-radius: 1px;
+                color: var(--color-checkboxes);
+            }
+        }
+    }
+
+    &__generate-button-container {
+
+        margin-top: 75px;
+
+        &>button {
+            background-color: var(--color-input-range-btn);
+            color: var(--txt-color-input);
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            transition:
+                background-color 150ms ease-out,
+                color 150ms ease-out;
+
+            &:hover {
+                background-color: var(--color-input-range-btn--hover);
+                color: var(--txt-color-input--hover);
+
+            }
+
+            &:active {
+
+                background-color: var(--color-input-range-btn--active);
+                color: var(--txt-color-input--active);
             }
         }
     }
