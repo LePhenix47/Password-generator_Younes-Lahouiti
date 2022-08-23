@@ -15,9 +15,6 @@ $color-input-range-btn--hover: darken($color-input-range-btn, 10%);
 $color-input-range-btn--active: lighten($color-input-range-btn, 10%);
 $color-input-range-btn--thumb: lighten($color-input-range-btn, 20%);
 
-
-$color-input-range-btn--hover: lighten($color-input-range-btn, 10%);
-
 $color-copy-btn: #8c5d61;
 $color-copy-btn--hover: lighten($color-copy-btn, 10%);
 $color-copy-btn--active: lighten($color-copy-btn, 20%);
@@ -58,7 +55,116 @@ $color-checkboxes: #b78583;
 
     --bg-selection: orange;
     --color-selection: black;
+}
 
+
+.dark-mode {
+    $bg-body: #10090b;
+    $bg-color-input: black;
+    $txt-color-input: white;
+    $txt-color-input--active: darken($txt-color-input, 60%);
+
+    $color-input-shadow: #22191d;
+
+    $color-input-range-bg: #392325;
+
+
+    $color-input-range-btn: #8f5f5c;
+    $color-input-range-btn--hover: darken($color-input-range-btn, 10%);
+
+    $color-input-range-btn--active: lighten($color-input-range-btn, 10%);
+    $color-input-range-btn--thumb: lighten($color-input-range-btn, 20%);
+
+    $color-copy-btn: #8c5d61;
+    $color-copy-btn--hover: lighten($color-copy-btn, 10%);
+    $color-copy-btn--active: lighten($color-copy-btn, 20%);
+
+    $color-copy-btn-icon--hover: lighten($color-copy-btn , 10%);
+    $color-copy-btn-icon--active: lighten($color-copy-btn , 20%);
+
+    --bg-body: #{$bg-body};
+    --bg-color-input: #{$bg-color-input};
+
+    --txt-color-input: #{$txt-color-input};
+    --txt-color-input--active: #{$txt-color-input--active};
+
+    --color-input-shadow: #{$color-input-shadow};
+
+    --color-input-range-bg:#{$color-input-range-bg};
+
+    --color-input-range-btn:#{$color-input-range-btn};
+    --color-input-range-btn--hover: #{$color-input-range-btn--hover};
+    --color-input-range-btn--active: #{$color-input-range-btn--active};
+    --color-input-range-btn--thumb: #{$color-input-range-btn--thumb};
+
+    --color-copy-btn:#{$color-copy-btn};
+    --color-copy-btn--active: #{$color-copy-btn--active};
+    --color-copy-btn--hover: #{$color-copy-btn--hover};
+    --color-copy-btn-icon--hover: #{$color-copy-btn-icon--hover};
+    --color-copy-btn-icon--active: #{$color-copy-btn-icon--active};
+
+    --color-checkboxes:#{$color-checkboxes};
+
+    --color-input-range-btn--hover: #{$color-input-range-btn--hover};
+
+
+
+    --bg-selection: orange;
+    --color-selection: black;
+}
+
+.light-mode {
+    $bg-body: #eff6f4;
+    $bg-color-input: white;
+    $txt-color-input: black;
+    $txt-color-input--active: lighten($txt-color-input, 60%);
+    $color-input-shadow: #dfe6e2;
+    $color-input-range-bg: #c5ddda;
+    $color-input-range-btn--hover: lighten($color-input-range-btn, 10%);
+
+
+    $color-input-range-btn--hover: darken($color-input-range-btn, 10%);
+    $color-input-range-btn: #70a0a3;
+    $color-input-range-btn--hover: lighten($color-input-range-btn, 10%);
+    $color-input-range-btn--active: lighten($color-input-range-btn, 10%);
+    $color-input-range-btn--thumb: darken($color-input-range-btn, 20%);
+
+    $color-copy-btn: #739f9c;
+    $color-copy-btn--hover: darken($color-copy-btn, 10%);
+    $color-copy-btn--active: darken($color-copy-btn, 20%);
+
+    $color-copy-btn-icon--hover: lighten($color-copy-btn , 10%);
+    $color-copy-btn-icon--active: lighten($color-copy-btn , 20%);
+
+    $color-checkboxes: #4c7c7d;
+
+    --bg-body: #{$bg-body};
+    --bg-color-input: #{$bg-color-input};
+
+    --txt-color-input: #{$txt-color-input};
+    --txt-color-input--active: #{$txt-color-input--active};
+
+    --color-input-shadow: #{$color-input-shadow};
+
+    --color-input-range-bg:#{$color-input-range-bg};
+
+    --color-input-range-btn:#{$color-input-range-btn};
+    --color-input-range-btn--hover: #{$color-input-range-btn--hover};
+    --color-input-range-btn--active: #{$color-input-range-btn--active};
+    --color-input-range-btn--thumb: #{$color-input-range-btn--thumb};
+
+    --color-copy-btn:#{$color-copy-btn};
+    --color-copy-btn--active: #{$color-copy-btn--active};
+    --color-copy-btn--hover: #{$color-copy-btn--hover};
+    --color-copy-btn-icon--hover: #{$color-copy-btn-icon--hover};
+    --color-copy-btn-icon--active: #{$color-copy-btn-icon--active};
+
+    --color-checkboxes:#{$color-checkboxes};
+
+    --color-input-range-btn--hover: #{$color-input-range-btn--hover};
+
+    --bg-selection: blue;
+    --color-selection: white;
 }
 
 @media (prefers-color-scheme: light) {
@@ -161,8 +267,9 @@ body {
     font-family: Open sans,
         Helvetica,
         sans-serif;
-    background: var(--bg-body);
+    background-color: var(--bg-body);
     color: var(--txt-color-input);
+    transition: color 150ms ease-out, background-color 150ms ease-out;
 }
 
 
@@ -265,6 +372,10 @@ label {
     &__generated {
         @include center-flex;
 
+        @include mobile-only {
+            @include center-flex-column;
+        }
+
         &-text {
             background-color: var(--bg-color-input);
             color: var(--txt-color-input);
@@ -314,6 +425,10 @@ label {
         align-items: center;
         width: 71%;
         margin: 50px 0;
+
+        @include mobile-only {
+            @include center-flex-column;
+        }
 
         &-input {
             @include center-flex;

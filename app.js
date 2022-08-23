@@ -38,6 +38,8 @@ function copyPasswordToClipboard() {
 }
 
 //Part 3
+const checkboxLabels = document.querySelectorAll(".password__checkboxes>*");
+console.log(checkboxLabels[0]);
 
 //Part 4
 
