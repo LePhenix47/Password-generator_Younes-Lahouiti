@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <meta name="description" content="This repository contains the code for the password generator">
-  <meta color="color-scheme" content="light dark" />
+  <meta color="color-scheme" content="dark light" />
 
   <!-- Title -->
   <title>Password generator</title>
@@ -30,9 +30,26 @@
 
   <!-- JS -->
   <script defer src="app.js"></script>
+  <script defer src="./dark-mode.js"></script>
+
 </head>
 
 <body>
+  <header class="theme__container">
+
+    <p>Toggle theme</p>
+    <div class="theme__buttons">
+      <button>
+        <i class="fa-solid fa-sun"></i>
+      </button>
+
+      <button>
+        <i class="fa-solid fa-moon"></i>
+      </button>
+
+    </div>
+  </header>
+
   <main class="main">
     <div class="password__container">
       <div class="password__generated">
@@ -45,34 +62,37 @@
 
       <div class="password__options">
         <div class="password__characters-range">
-          <input type="range" min="8" max="30" step="1" class="password__characters-range-input">
-          <p>x characters</p>
+          <div class="password__characters-range-input-container">
+            <input type="range" min="8" max="30" step="1" class="password__characters-range-input">
+
+          </div>
+          <p><span>x</span> characters</p>
         </div>
 
         <div class="password__checkboxes">
           <label for="symbols" class="password__checkboxes-labels">
-            Include symbols
             <input type="checkbox" id="symbols" class="hide password__checkboxes-input">
             <i class="fa-solid fa-square password__checkboxes-input-unchecked"></i>
             <i class="fa-solid fa-square-check password__checkboxes-input-checked"></i>
+            Include symbols ($#!%)
           </label>
           <label for="numbers" class="password__checkboxes-labels">
-            Include numbers
             <input type="checkbox" id="numbers" class="hide password__checkboxes-input">
             <i class="fa-solid fa-square password__checkboxes-input-unchecked"></i>
             <i class="fa-solid fa-square-check password__checkboxes-input-checked"></i>
+            Include numbers (01234...)
           </label>
           <label for="lowercase" class="password__checkboxes-labels">
-            Include lowercase characters
             <input type="checkbox" id="lowercase" class="hide password__checkboxes-input">
             <i class="fa-solid fa-square password__checkboxes-input-unchecked"></i>
             <i class="fa-solid fa-square-check password__checkboxes-input-checked"></i>
+            Include lowercase characters (abc...)
           </label>
           <label for="uppercase" class="password__checkboxes-labels">
-            Include uppercase characters
             <input type="checkbox" id="uppercase" class="hide password__checkboxes-input">
             <i class="fa-solid fa-square password__checkboxes-input-unchecked"></i>
             <i class="fa-solid fa-square-check password__checkboxes-input-checked"></i>
+            Include uppercase characters (DEF...)
           </label>
         </div>
       </div>
