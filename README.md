@@ -5,4 +5,5 @@ It also has a theme toggler!
 
 Took me ~20 hours to make
 
-GitHub Pages: 
+GitHub Pages: https://lephenix47.github.io/Password-generator_Younes-Lahouiti/
+
