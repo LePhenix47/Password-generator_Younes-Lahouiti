@@ -74,7 +74,6 @@ $color-checkboxes: #b78583;
 
     $color-input-range-btn--active: lighten($color-input-range-btn, 10%);
     $color-input-range-btn--thumb: lighten($color-input-range-btn, 20%);
-
     $color-copy-btn: #8c5d61;
     $color-copy-btn--hover: lighten($color-copy-btn, 10%);
     $color-copy-btn--active: lighten($color-copy-btn, 20%);
@@ -269,7 +268,7 @@ body {
         sans-serif;
     background-color: var(--bg-body);
     color: var(--txt-color-input);
-    transition: color 150ms ease-out, background-color 150ms ease-out;
+    transition: color 450ms ease-out, background-color 450ms ease-out;
 }
 
 
@@ -374,6 +373,7 @@ label {
 
         @include mobile-only {
             @include center-flex-column;
+            gap: 25px;
         }
 
         &-text {
@@ -388,6 +388,11 @@ label {
                 0px 5px 8px var(--color-input-shadow), 0px -5px 8px var(--color-input-shadow), //Y axis, up & down
                 5px 0px 8px var(--color-input-shadow), -5px 0px 8px var(--color-input-shadow); //X axis, left & right
             border: none;
+
+            @include mobile-only {
+                font-size: 16px;
+                width: 250px;
+            }
 
             &::placeholder {
                 color: var(--txt-color-input--active);
@@ -428,6 +433,7 @@ label {
 
         @include mobile-only {
             @include center-flex-column;
+            gap: 25px;
         }
 
         &-input {
@@ -438,6 +444,10 @@ label {
             height: 5px;
 
             width: 210px;
+
+            @include mobile-only {
+                width: 250px;
+            }
 
 
             &::-webkit-slider-runnable-track {
@@ -461,6 +471,10 @@ label {
                 border-radius: 100vmax;
                 box-shadow: -105px 0px 0px 100px var(--color-input-range-btn);
                 transition: background-color 250ms ease-out;
+
+                @include mobile-only {
+                    box-shadow: -155px 0px 0px 150px var(--color-input-range-btn);
+                }
             }
 
         }
@@ -471,6 +485,9 @@ label {
         flex-direction: column;
         gap: 15px; //It's just amazing that you can now add gaps between elements using flexbox
 
+        @include mobile-only {
+            gap: 25px;
+        }
 
         &-container {
             display: flex;
@@ -499,7 +516,7 @@ label {
             &-checked {
                 border-radius: 1px;
                 color: var(--color-checkboxes);
-                outline: 2px solid $txt-color-input;
+                outline: 2px solid var(--txt-color-input)
             }
 
             &-unchecked {
