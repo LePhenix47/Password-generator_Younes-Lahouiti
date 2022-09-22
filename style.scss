@@ -475,6 +475,10 @@ label {
                 cursor: pointer;
             }
 
+            &::-moz-range-thumb:hover {
+                cursor: pointer;
+            }
+
             &::-webkit-slider-thumb {
                 appearance: none;
                 aspect-ratio: 1/1;
