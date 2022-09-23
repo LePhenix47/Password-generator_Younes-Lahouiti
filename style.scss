@@ -26,6 +26,7 @@ $color-copy-btn-icon--active: lighten($color-copy-btn , 20%);
 $color-checkboxes: #b78583;
 
 :root {
+    color-scheme: dark;
     --bg-body: #{$bg-body};
     --bg-color-input: #{$bg-color-input};
 
@@ -166,6 +167,8 @@ $color-checkboxes: #b78583;
     --color-selection: white;
 }
 
+
+//Light theme
 @media (prefers-color-scheme: light) {
     $bg-body: #eff6f4;
     $bg-color-input: white;
@@ -192,6 +195,7 @@ $color-checkboxes: #b78583;
     $color-checkboxes: #4c7c7d;
 
     :root {
+        color-scheme: light;
         --bg-body: #{$bg-body};
         --bg-color-input: #{$bg-color-input};
 
@@ -223,7 +227,7 @@ $color-checkboxes: #b78583;
 
 }
 
-
+//Maps
 $breakpoints: (
     mobile: 768px,
     tablet: 992px,
@@ -231,27 +235,8 @@ $breakpoints: (
     desktop: 1920px
 );
 
-//LIGHT MODE
-// $bg-body: #eff6f4;
-// $bg-color-input: white;
-// $txt-color-input: black;
-// $color-input-shadow: #dfe6e2;
-// $color-input-range-bg: #c5ddda;
-// $color-input-range-btn: #70a0a3;
-// $color-copy-btn: #739f9c;
-// $color-checkboxes: #4c7c7d;
 
-//DARK MODE
-// $bg-body: #10090b;
-// $bg-color-input: black;
-// $txt-color-input: white;
-// $color-input-shadow: #22191d;
-// $color-input-range-bg: #392325;
-// $color-input-range-btn: #8f5f5c;
-// $color-copy-btn: #8c5d61;
-// $color-checkboxes: #b78583;
-
-
+//Norm & typo
 *,
 ::before,
 ::after {
@@ -294,6 +279,7 @@ label {
         @content;
     }
 }
+
 
 @mixin center-flex {
     display: flex;
@@ -362,7 +348,7 @@ label {
 
     &__container {
         width: 85%;
-        height: 85vh;
+        min-height: 85vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -374,6 +360,8 @@ label {
         @include mobile-only {
             @include center-flex-column;
             gap: 25px;
+
+            margin-top: 25px;
         }
 
         &-text {
@@ -402,6 +390,10 @@ label {
         &-copy {
             background-color: transparent;
             margin-left: 5%;
+
+            @include mobile-only {
+                margin-left: 0;
+            }
 
             &:hover>i {
                 cursor: pointer;
